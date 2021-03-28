@@ -1,0 +1,29 @@
+The Need for a Build System
+Once c code is written, the user has to compile it and do several other things with the code. All these are done through the terminal.
+This mostly requires typing some long commands into the terminal  with several compiler flags in some instances; and is therefore prone to error. For example, to assemble the C code contained in a C file called test_code.c, the following command is required:
+
+$ arm-none-eabi-gcc -S -mcpu=cortex-m4 -mthumb test_code.c
+
+The code may even contain extra flags like the -o flag which tells the compiler the compiler to name the output (.o or .s or .elf, etc) a certain way:
+$ arm-none-eabi-gcc -S -mcpu=cortex-m4 -mthumb test_code.c -o test_code.s
+
+To minimise mistakes, a Makefile becomes handy. In my Makefile, notice the $@ that specifies the filename of the target of the rule, i.e. $@ is the name of whichever target caused the rule to run (https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html#Automatic-Variables).
+
+This required me to create src and build folders prior to beginning the project.
+
+Some useful resources:
+https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html#Automatic-Variables
+
+http://cs107e.github.io/guides/make/
+
+https://stackoverflow.com/questions/3220277/what-do-the-makefile-symbols-and-mean
+
+https://makefiletutorial.com/
+
+http://www.gnu.org/software/make/manual/make.html#Introduction
+
+https://stackoverflow.com/questions/37372824/writing-a-makefile-for-arm-project
+
+https://github.com/jhgorse/gcc-arm-none-eabi_samples/blob/master/makefiles/Makefile.common
+
+https://www.gnu.org/software/make/manual/html_node/Makefile-Contents.html

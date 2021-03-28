@@ -1,0 +1,11 @@
+For us to compile the c code targeting an ARM chip and upload it to the chip (STM32F446RE in my case), we need the following tools at a minimum:
+1. GNU GCC ARM Cross-compiler (Not the usual GNU GCC Compiler)
+sudo apt-get install gcc-arm-none-eabi
+
+2. GNU Linker(ld) for ARM, GNU objcopy, GNU objdump - these are found in GNU Binutils
+sudo apt-get install binutils-arm-none-eabi
+
+3. GNU Debugger (GDB) - Is the GNU debugger that supports debugging and flashing the code to the MCU for multiple architectures.
+sudo apt-get install gdb-multiarch
+
+Refer to my other notes on Toolchains in order to get more information.
