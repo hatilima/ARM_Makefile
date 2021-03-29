@@ -30,3 +30,4 @@ clean:
 #Check out the following links:
 #https://stackoverflow.com/questions/2514903/what-does-all-stand-for-in-a-makefile
 #https://stackoverflow.com/questions/22545029/makefile-how-to-correctly-include-header-file-and-its-directory
+#https://www.atlassian.com/git/tutorials/syncing/git-push
