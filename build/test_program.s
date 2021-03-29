@@ -28,6 +28,9 @@ b:
 	.align	2
 sum:
 	.space	4
+	.align	2
+reg:
+	.space	4
 	.text
 	.align	2
 	.global	main
